@@ -56,11 +56,7 @@ while len(guessed_states) < 50:
 
 # states_to_learn.csv
 all_states = states_file["state"].to_list()
-missing_states = []
-
-for state in all_states:
-    if state not in (guessed_states):
-        missing_states.append(state)
+missing_states = [state for state in all_states if state not in guessed_states]
 
 missing_states_dict = {"Missing States": missing_states}
 
