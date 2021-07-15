@@ -64,6 +64,19 @@ nato_alphabet = pandas.read_csv("day26\\nato_phonetic_alphabet.csv")
 nato_alphabet_dict = {row.letter: row.code for (
     _, row) in nato_alphabet.iterrows()}
 
-user_input = input("Enter a word: ").upper()
-phonetic_code_words = [nato_alphabet_dict[letter] for letter in user_input]
-print(phonetic_code_words)
+print(nato_alphabet_dict)
+
+
+def generate_phonetic():
+    user_input = input("Enter a word: ").upper()
+    try:
+        phonetic_code_words = [nato_alphabet_dict[letter]
+                               for letter in user_input]
+    except KeyError:
+        print("Sorry, only letters in the alphabet please.")
+        generate_phonetic()
+    else:
+        print(phonetic_code_words)
+
+
+generate_phonetic()
