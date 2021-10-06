@@ -1,0 +1,33 @@
+/* colors */
+/* #CEE5D0 */
+/* #F3F0D7 */
+/* #E0C097 */
+/* #FF7878 */
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+span {
+  text-decoration: underline;
+}
+
+.top-container {
+  background-color: #cee5d0;
+}
+
+.middle-container {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+}
+
+.bottom-container {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
